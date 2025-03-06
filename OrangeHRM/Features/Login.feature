@@ -20,6 +20,7 @@ Scenario: 020 The User Login Into Homepage
 	When The User Enter Username "Admin" and Password "admin123"
 	When The User Click the Login Button
 	Then The User Login into System
+	Then The User Logout of System
 
 Scenario: 030 User Forgot Password
 	Given The User Navigate to OrangeHRM Website

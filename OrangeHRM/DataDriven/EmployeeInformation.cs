@@ -49,7 +49,7 @@ namespace OrangeHRM.DataDriven
                 int row = 3;
                 int col = 1;
 
-                while (String.IsNullOrEmpty(ws.Cells[row, col].Value?.ToString()) == false) ;
+                while (String.IsNullOrEmpty(ws.Cells[row, col].Value?.ToString()) == false)
                 {
                     EmployeeInformation emp = new EmployeeInformation();
                     emp.Id = int.Parse(ws.Cells[row, col].Value.ToString());

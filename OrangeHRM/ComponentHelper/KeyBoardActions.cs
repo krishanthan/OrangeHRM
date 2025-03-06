@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V126.IndexedDB;
+
 using OpenQA.Selenium.Interactions;
 using OrangeHRM.Settings;
 using System;

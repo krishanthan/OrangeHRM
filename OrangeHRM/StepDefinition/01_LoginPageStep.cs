@@ -317,6 +317,22 @@ namespace OrangeHRM.StepDefinition
             }
         }
 
+        [Then("The User Logout of System")]
+        public void ThenTheUserLogoutOfSystem()
+        {
+            if(LogoutBtn.Displayed)
+            {
+                ButtonHelper.ClickButton(LogoutBtn);
+                ButtonHelper.ClickBtnOption(LogoutBtnoption, "Logout");
+            }
+            else
+            {
+                throw new NoSuchElementException();
+            }
+
+        }
+
+
 
 
         #endregion

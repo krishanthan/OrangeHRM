@@ -26,6 +26,12 @@ namespace OrangeHRM.PageObject
         public IWebElement ResetPasswordBtn => ObjectRepo.driver.FindElement(By.XPath("(//button[contains(@class,'oxd-button oxd-button--large')])[2]"));
 
         public IWebElement ResetPasswordNotification => ObjectRepo.driver.FindElement(By.XPath("//h6[contains(@class,'oxd-text oxd-text--h6')]"));
+
+        public IWebElement LogoutBtn=>ObjectRepo.driver.FindElement(By.XPath("//p[@class='oxd-userdropdown-name']"));
+
+        public IReadOnlyList <IWebElement> LogoutBtnoption=> ObjectRepo.driver.FindElements(By.XPath("//ul[@class='oxd-dropdown-menu']/li"));
+
+
     }
 
 }

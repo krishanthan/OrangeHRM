@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V125.FedCm;
+using OrangeHRM.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +13,7 @@ namespace OrangeHRM.ComponentHelper
         #region ClickButton
         public static void ClickButton(IWebElement element)
         {
-           if(element.Displayed)
+            if (element.Displayed)
             {
                 element.Click();
             }
@@ -22,8 +22,31 @@ namespace OrangeHRM.ComponentHelper
             {
                 throw new NoSuchElementException();
             }
+
+        }
+
+        public static void ClickBtnOption(IReadOnlyList<IWebElement> AlldropdownButton, String ButtonName)
+        {
+            if (ObjectRepo.driver != null)
+            {
+                for (int i = 0; i < AlldropdownButton.Count; i++)
+                {
+                    if (Convert.ToString(AlldropdownButton[i].Text) == ButtonName)
+                    {
+                        AlldropdownButton[i].Click();
+                    }
+
+                }
+            }
+
+            else
+            {
+                throw new NoSuchElementException();
+            }
         }
     }
+
+
 
     #endregion ClickButton
 }

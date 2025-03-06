@@ -45,5 +45,7 @@ namespace OrangeHRM.Configuration
 
             return Convert.ToInt32(Timeout);
         }
+
+    
     }
 }

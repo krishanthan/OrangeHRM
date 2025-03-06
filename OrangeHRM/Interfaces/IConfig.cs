@@ -14,6 +14,7 @@ namespace OrangeHRM.Interfaces
         String GetPassword();
         String GetURL();
 
+         
         int GetPageLoadTimeout();
     }
 }

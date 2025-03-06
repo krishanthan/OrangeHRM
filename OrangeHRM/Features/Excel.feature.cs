@@ -217,7 +217,7 @@ this.ScenarioInitialize(scenarioInfo);
         public void _030_CompareTheFiles_CUsersKrishOrangeHRMExcelFileEmployeeDetails_Csv()
         {
 #line 32
-this._030_CompareTheFiles("C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.csv", "C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.csv", ((string[])(null)));
+this._030_CompareTheFiles("C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.csv", "C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails-01.csv", ((string[])(null)));
 #line hidden
         }
         
@@ -225,7 +225,7 @@ this._030_CompareTheFiles("C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails
         public void _030_CompareTheFiles_CUsersKrishOrangeHRMExcelFileEmployeeDetails_Xlsx()
         {
 #line 32
-this._030_CompareTheFiles("C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.xlsx", "C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.xlsx", ((string[])(null)));
+this._030_CompareTheFiles("C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails.xlsx", "C:\\Users\\krish\\OrangeHRMExcelFile\\EmployeeDetails-01.xlsx", ((string[])(null)));
 #line hidden
         }
         
