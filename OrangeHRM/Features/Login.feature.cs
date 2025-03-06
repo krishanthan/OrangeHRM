@@ -70,6 +70,15 @@ namespace OrangeHRM.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 4
+#line hidden
+#line 5
+ testRunner.Given("The User Navigate to OrangeHRM Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
         public virtual void _010TheUserLoginWithInvalidCredentials(string userName, string password, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
@@ -77,7 +86,7 @@ namespace OrangeHRM.Features
             argumentsOfScenario.Add("UserName", userName);
             argumentsOfScenario.Add("Password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("010 The User Login with Invalid Credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -87,48 +96,48 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 6
- testRunner.Given("The User Navigate to OrangeHRM Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 7
- testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 8
- testRunner.When(string.Format("The User Enter Incorrect Username \"{0}\" and Password \"{1}\"", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 9
- testRunner.When("The User Click the Login Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 4
+this.FeatureBackground();
 #line hidden
 #line 10
+ testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 11
+ testRunner.When(string.Format("The User Enter Incorrect Username \"{0}\" and Password \"{1}\"", userName, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
+ testRunner.When("The User Click the Login Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 13
  testRunner.Then("The error message should be appear as \"Invalid credentials\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("010 The User Login with Invalid Credentials, Aadmin", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("010 The User Login with Invalid Credentials, Aadmin", SourceLine=16)]
         public void _010TheUserLoginWithInvalidCredentials_Aadmin()
         {
-#line 5
+#line 8
 this._010TheUserLoginWithInvalidCredentials("Aadmin", "Adddmin123", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("010 The User Login with Invalid Credentials, AadminS", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("010 The User Login with Invalid Credentials, AadminS", SourceLine=16)]
         public void _010TheUserLoginWithInvalidCredentials_AadminS()
         {
-#line 5
+#line 8
 this._010TheUserLoginWithInvalidCredentials("AadminS", "Krish132", ((string[])(null)));
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("020 The User Login Into Homepage", SourceLine=16)]
+        [TechTalk.SpecRun.ScenarioAttribute("020 The User Login Into Homepage", SourceLine=19)]
         public void _020TheUserLoginIntoHomepage()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("020 The User Login Into Homepage", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -138,35 +147,38 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 18
- testRunner.Given("The User Navigate to OrangeHRM Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 19
- testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 20
- testRunner.When("The User Enter Username \"Admin\" and Password \"admin123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 21
- testRunner.When("The User Click the Login Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 4
+this.FeatureBackground();
 #line hidden
 #line 22
- testRunner.Then("The User Login into System", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 23
- testRunner.Then("The User Logout of System", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("The User Enter Username \"Admin\" and Password \"admin123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
+ testRunner.When("The User Click the Login Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
+ testRunner.Then("The User Login into System", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 26
+ testRunner.When("The User Logout of System", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 27
+ testRunner.Then("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("030 User Forgot Password", SourceLine=24)]
+        [TechTalk.SpecRun.ScenarioAttribute("030 User Forgot Password", SourceLine=28)]
         public void _030UserForgotPassword()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("030 User Forgot Password", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 25
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -176,25 +188,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 26
- testRunner.Given("The User Navigate to OrangeHRM Website", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 27
- testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 28
- testRunner.When("The User Click the Forgot Password Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 29
- testRunner.Then("The User Land on Forgot Password Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 30
- testRunner.When("The User Enter the UserName \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 4
+this.FeatureBackground();
 #line hidden
 #line 31
- testRunner.When("The User Click the Reset-Password Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("The User Navigate to OrangeHRM Login Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
+ testRunner.When("The User Click the Forgot Password Link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 33
+ testRunner.Then("The User Land on Forgot Password Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 34
+ testRunner.When("The User Enter the UserName \"Admin\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 35
+ testRunner.When("The User Click the Reset-Password Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 36
  testRunner.Then("The User Get the notification text of \"Reset Password link sent successfully\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

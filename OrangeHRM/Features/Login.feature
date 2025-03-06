@@ -1,9 +1,11 @@
 ﻿
 Feature: 01_OrangeHRM-LoginPage
 
+Background: pre-condition
+	Given The User Navigate to OrangeHRM Website
+
 
 Scenario Outline: 010 The User Login with Invalid Credentials
-	Given The User Navigate to OrangeHRM Website
 	Given The User Navigate to OrangeHRM Login Page
 	When The User Enter Incorrect Username "<UserName>" and Password "<Password>"
 	When The User Click the Login Button
@@ -15,15 +17,15 @@ Examples:
 	| AadminS  | Krish132   |
 
 Scenario: 020 The User Login Into Homepage
-	Given The User Navigate to OrangeHRM Website
+
 	Given The User Navigate to OrangeHRM Login Page
 	When The User Enter Username "Admin" and Password "admin123"
 	When The User Click the Login Button
 	Then The User Login into System
-	Then The User Logout of System
+	When The User Logout of System
+	Then The User Navigate to OrangeHRM Login Page
 
 Scenario: 030 User Forgot Password
-	Given The User Navigate to OrangeHRM Website
 	Given The User Navigate to OrangeHRM Login Page
 	When The User Click the Forgot Password Link
 	Then The User Land on Forgot Password Page

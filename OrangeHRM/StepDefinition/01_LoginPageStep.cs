@@ -37,6 +37,7 @@ namespace OrangeHRM.StepDefinition
 
         }
 
+        [Then("The User Navigate to OrangeHRM Login Page")]
         [Given(@"The User Navigate to OrangeHRM Login Page")]
         public void GivenTheUserNavigateToOrangeHRMLoginPage()
         {
@@ -209,6 +210,21 @@ namespace OrangeHRM.StepDefinition
             }
         }
 
+        [When("The User Logout of System")]
+        public void ThenTheUserLogoutOfSystem()
+        {
+            if (LogoutBtn.Displayed)
+            {
+                ButtonHelper.ClickButton(LogoutBtn);
+                ButtonHelper.ClickBtnOption(LogoutBtnoption, "Logout");
+            }
+            else
+            {
+                throw new NoSuchElementException();
+            }
+
+        }
+
 
 
         #endregion
@@ -317,20 +333,6 @@ namespace OrangeHRM.StepDefinition
             }
         }
 
-        [Then("The User Logout of System")]
-        public void ThenTheUserLogoutOfSystem()
-        {
-            if(LogoutBtn.Displayed)
-            {
-                ButtonHelper.ClickButton(LogoutBtn);
-                ButtonHelper.ClickBtnOption(LogoutBtnoption, "Logout");
-            }
-            else
-            {
-                throw new NoSuchElementException();
-            }
-
-        }
 
 
 
